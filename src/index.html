@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Plus</title>
+
+    <link rel="stylesheet" href="style/styles.css" />
+  </head>
+  <body>
+    <div class="form">
+      <form id="search-bar">
+        <input 
+        class="search"
+        type="text" 
+        id="search-city" 
+        placeholder="City name">
+        <input 
+        class="submit-button"
+        type="submit" 
+        value="🔎 Search">
+        <button 
+        class ="button" 
+        id="location-dot">
+        📍
+      </button>
+      </form>
+      </div>
+
+      <div class="appDisplay">
+      <h1 class="city" id="cityName"></h1>
+      <h3 id="date"></h3>
+      <div id="temp-details"><span id = "temp"></span>°</div>
+          </div>
+          
+          
+      <div class="subtext1">Today</div>
+      <div class="subtext2">Feels like...</div>
+      <p>
+        <img src="https://www.freeiconspng.com/uploads/headphones-png-19.png" width="350" alt="Headphones PNG Pic" /></a>
+      </p>
+    </div>
+
+    <div class="card" style="width: 14rem">
+      <img class="card-img-top" src="images/partcloudyanimated.svg" alt="Card image cap" />
+
+     
+      <div class="details"> <span id ="description"> </span> </div>
+
+      <div class="details">Humidity: <span id = "humidity"></span> %</div>
+
+      <div class="details">Windspeed: <span id = "windspeed"></span> mph</div>
+
+    </div>
+      </div>
+  </div>
+
+    <div class="music" style="width: 15rem;">
+  <img class="music-img" src="images/21 pilots.jpeg" alt="Card image cap">
+  <div class="card-body">
+    <div class="card-text">🎵
+      <br />
+      Twenty One Pilots
+      <br />
+      "Mulberry Street"
+    </div>
+    </div>
+  </div>
+
+  <br />
+
+<div class="container ">
+  <div class="row g-3">
+    <div class="col"> 
+     Mon
+     <br />
+     <div class = icon>🌨️</div>
+     <br />
+    <div class = temps> 67°/ 80° </div>
+    </div>
+    <div class="col">
+      Tue
+      <br>
+      <div class = icon>⛅️</div>
+     <br />
+     <div class = temps>71°/ 87°</div>
+    </div>
+    <div class="col">
+      Wed
+      <br />
+      <div class = icon>☀️</div>
+     <br />
+     <div class = temps>75°/ 90°</div>
+    </div>
+    <div class="col">
+      Thu
+      <br />
+      <div class = icon>☀️</div>
+     <br />
+     <div class = temps>78°/ 92°</div>
+    </div>
+    <div class="col">
+      Fri
+      <br />
+      <div class = icon>⛈️</div>
+     <br />
+     <div class = temps>68°/ 87°</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <span id="units">
+        <a href="#" id = "celcius-link"> °C</a> |
+        <a href="#" id = "fahrenheit-link"> °F</a>
+      </span> -->
+ 
+<!-- <div class="music-2">
+  Monday
+  <img class="music-img-2" src="images/summerland.jpeg" alt="Card image cap">
+<div class="music-text">🎵
+      <br />
+      Half・alive
+      <br />
+      "Summerland"
+  </div>
+    </div>
+
+</div> -->
+
+
+<script src="app.js">
+</script>
+
+  </body>
+</html>
