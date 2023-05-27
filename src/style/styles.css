@@ -2,9 +2,6 @@ body {
   font-family: "Lora", serif;
   text-align: center;
   margin: 0 auto;
-  /* background-image: url(src/images/branch);
-  background-repeat: no-repeat;
-  background-size: 50%; */
 }
 
 h3 {
@@ -68,22 +65,6 @@ p {
   box-shadow: 0px 10px 20px 2px rgb(176, 216, 176);
   transition: all 200ms ease-in-out;
 }
-/* 
-.desc {
-  font-size: 25px;
-  text-align: center;
-  font-weight: 100px;
-  color: rgb(152, 150, 150);
-} */
-
-/* #fahrenheit-link {
-  text-decoration: none;
-  color: #000;
-}
-
-#fahrenheit-link:hover {
-  color: rgb(195, 144, 226);
-} */
 
 .city {
   font-weight: 500px;
