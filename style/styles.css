@@ -26,6 +26,10 @@ p {
   padding-right: 350px;
 }
 
+.bottom-link {
+  text-decoration: none;
+}
+
 .card {
   font-family: "Lora", serif;
   border: none;
@@ -38,14 +42,6 @@ p {
   max-width: 300px;
   max-height: 300px;
 }
-/* #celcius-link {
-  text-decoration: none;
-  color: #000;
-}
-
-#celcius-link:hover {
-  color: rgb(195, 144, 226);
-} */
 
 .col {
   background: rgb(144, 215, 143);
@@ -75,6 +71,11 @@ p {
 
 .icon {
   font-size: 25px;
+}
+
+.link {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .music {
