@@ -27,29 +27,18 @@ p {
   padding-right: 350px;
 }
 
-/* .weather-app {
-  max-width: 800px;
-  max-height: 800px;
-  margin: 0 auto;
-  border: solid 1px #000;
-} */
-
 .bottom-link {
   text-decoration: none;
 }
 
 .card {
+  background: none;
   font-family: "Lora", serif;
+  font-size: 16px;
   border: none;
   position: float;
-  left: 375px;
+  left: 550px;
   bottom: 250px;
-}
-
-.card-img-top {
-  max-width: 100px;
-  max-height: 100px;
-  margin: 0 auto;
 }
 
 .col {
@@ -59,10 +48,6 @@ p {
   margin-left: 20px;
   margin-top: 150px;
   margin-bottom: 20px;
-  /* margin-top: 130px;
-  margin-bottom: 20px;
-  margin-left: 75px;
-  margin-right: 75px; */
   border: none;
   box-shadow: 0px 5px 10px 0px rgb(104, 169, 104);
   border-radius: 20px;
@@ -98,18 +83,12 @@ p {
   padding-top: -10px;
 }
 
-/* .music-2 {
-  text-align: center;
-  margin-top: 100px;
-  font-style: italic;
-} */
-
 .music-img {
   width: 70px;
   height: 70px;
   display: block;
   margin: 0 auto;
-  margin-top: -150px;
+  margin-top: -200px;
 }
 
 .music-img:hover {
@@ -119,18 +98,6 @@ p {
 .music-text {
   text-align: center;
   margin-bottom: 10px;
-}
-
-.music-img-2 {
-  width: 80px;
-  height: 80px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 5px;
-}
-
-.music-img-2:hover {
-  cursor: pointer;
 }
 
 .search {
@@ -213,6 +180,12 @@ p {
   color: #000;
   transition: all 200ms ease-in-out;
   border-color: #000;
+}
+
+#main-icon {
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0 auto;
 }
 
 #temp {

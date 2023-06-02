@@ -48,6 +48,11 @@ button.addEventListener("click", getCurrentPosition);
 
 //Weather data
 function showWeather(response) {
+  let mainIcon = document.querySelector("#main-icon");
+  mainIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   document.querySelector("h1").innerHTML = response.data.name;
 
   document.querySelector("#temp").innerHTML = Math.round(
