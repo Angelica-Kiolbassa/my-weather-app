@@ -37,19 +37,19 @@ p {
   font-size: 16px;
   border: none;
   position: float;
-  left: 550px;
-  bottom: 250px;
+  left: 575px;
+  bottom: 230px;
 }
 
 .col {
-  background: rgb(144, 215, 143);
+  /* background: rgb(144, 215, 143); */
   font-size: 16px;
   margin: 0, auto;
   margin-left: 20px;
   margin-top: 150px;
   margin-bottom: 20px;
   border: none;
-  box-shadow: 0px 5px 10px 0px rgb(104, 169, 104);
+  /* box-shadow: 0px 5px 10px 0px rgb(104, 169, 104); */
   border-radius: 20px;
 }
 
