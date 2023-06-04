@@ -150,14 +150,15 @@ p {
   font-size: 60px;
 }
 
-#celcius-link {
+#celsius-link {
   text-decoration: none;
   color: #000;
   font-size: 12px;
 }
 
-#celcius-link:hover {
-  color: rgb(195, 144, 226);
+#celsius-link:hover {
+  color: rgb(144, 215, 143);
+  cursor: pointer;
 }
 
 #description {
@@ -176,10 +177,12 @@ p {
   text-decoration: none;
   color: #000;
   font-size: 12px;
+  margin-bottom: -50px;
 }
 
 #fahrenheit-link:hover {
-  color: rgb(195, 144, 226);
+  color: rgb(144, 215, 143);
+  cursor: pointer;
 }
 
 #location-dot {
