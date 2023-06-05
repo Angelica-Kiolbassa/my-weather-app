@@ -3,8 +3,14 @@ body {
   text-align: center;
   margin: 0 auto;
   max-width: 45%;
-  border: solid 1px rgb(130, 191, 129);
-  border-radius: 20px;
+  background: #191a19;
+}
+
+#weather-app {
+  background: #fff;
+  border: solid 1px rgb(240, 255, 240);
+  border-radius: 40px;
+  max-width: 90%;
 }
 
 h3 {
@@ -113,7 +119,7 @@ p {
   text-align: center;
   border: solid 1px rgb(144, 215, 143);
   border-radius: 10px;
-  padding: 5px;
+  padding: 0px;
 }
 
 .submit-button {
@@ -177,7 +183,7 @@ p {
   border: solid, transparent;
   border-radius: 20px;
   /* background: rgb(144, 215, 143); */
-  color: rgb(130, 191, 129);
+  color: rgb(122, 183, 121);
   width: 100%;
 }
 
@@ -193,7 +199,7 @@ p {
 }
 
 #humidity {
-  color: rgb(130, 191, 129);
+  color: rgb(122, 183, 121);
   font-size: 16px;
 }
 
@@ -238,6 +244,6 @@ p {
 }
 
 #windspeed {
-  color: rgb(130, 191, 129);
+  color: rgb(122, 183, 121);
   font-size: 16px;
 }
