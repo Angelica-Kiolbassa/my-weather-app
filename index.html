@@ -20,8 +20,9 @@
   </head>
 
   <body>
-    <div class="container">
-    <div class="weather-app">
+    <div class="container" id="weather-app">
+    
+
     <div class="form">
       <form id="search-bar">
         <input 
@@ -44,7 +45,7 @@
       <div class="appDisplay">
       <h1 class="city" id="cityName"></h1>
       <h3 id="date"></h3>
-      <div id="temp-details"><span id = "temp"></span>°
+      <div id="temp-details"><span id="temp"></span>°
       <span id="units">
         <a href="#" id = "celsius-link"> °C | </a>
         <a href="#" id = "fahrenheit-link">°F</a>
@@ -64,9 +65,9 @@
     <div class="card" style="width: 10rem">
       <div class="details"> <span id ="description"> </span> </div>
 
-      <div class="details">Humidity: <span id = "humidity"></span> %</div>
+      <div class="details">Humidity: <span id = "humidity"></span><span id="humidity"> %</span></div>
 
-      <div class="details">Windspeed: <span id = "windspeed"></span> mph</div>
+      <div class="details">Windspeed: <span id = "windspeed"></span><span id="windspeed"> mph</span></div>
 
     </div>
       </div>
@@ -128,13 +129,15 @@
 </div>
 </div>
 
-<span class="link">
-<a href="https://github.com/Angelica-Kiolbassa/my-weather-app.git" class="bottom-link" target="_blank">Open-source code</a> by Angelica Kiolbassa
+<span class="link">This project was coded by: 
+  <a href="https://www.instagram.com/creating_angelica/?igshid=YmMyMTA2M2Y%3D" class="bottom-link" target="_blank">Angelica Kiolbassa</a> and is open-sourced on
+<a href="https://github.com/Angelica-Kiolbassa/my-weather-app.git" class="bottom-link" target="_blank">GitHub</a> and hosted on
+<a href="https://golden-concha-246855.netlify.app" class="bottom-link" target="_blank">Netlify</a> 
 </span>
-</div>
 
 <script src="app.js">
 </script>
-
+</div>
+</div>
   </body>
 </html>
