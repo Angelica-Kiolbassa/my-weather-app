@@ -147,17 +147,19 @@ p {
 
 .weather-forecast-temperatures {
   margin: 0 auto;
-  color: #93e4c1;
+  color: #2a2929;
+  font-size: 14px;
+}
+
+.weather-forecast-temperature-max {
   font-weight: bold;
+  color: #93e4c1;
   font-size: 16px;
+  margin-right: 5px;
 }
 
 .weather {
   font-size: 60px;
-}
-
-.weather-forecast-data {
-  margin-bottom: -20px;
 }
 
 #celsius-link {
