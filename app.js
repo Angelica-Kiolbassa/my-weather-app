@@ -29,9 +29,23 @@ let currentDate = new Date();
 h3.innerHTML = formatDate(currentDate);
 
 //Forceast
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-}
+// function displayForecast() {
+//   let forecastElement = document.querySelector("#forecast");
+
+//   forecastElement.innerHTML = `
+// <div class="container" id= "forecast">
+//   <div class="row g-3">
+//     <div class="col">
+//      <div class = "weather-forecast-data">Mon</div>
+//      <div class = "icon">⛅️</div>
+//      <div class= "weather-forecast-temperatures">
+//       <span class="weather-forecast-temperature-max">70°</span>
+//       <span class="weather-forecast-temperature-min">80°</span>
+//       </div>
+//     </div>
+//   </div>
+// `;
+// }
 
 //Bonus geolocation/button
 function getCurrentPosition(event) {
@@ -117,3 +131,5 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 let fahrenheitlink = document.querySelector("#fahrenheit-link");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
+
+// displayForecast();

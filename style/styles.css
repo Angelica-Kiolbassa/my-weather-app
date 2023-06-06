@@ -50,7 +50,7 @@ p {
   margin: 0, auto;
   margin-left: 20px;
   margin-top: 130px;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
   border: none;
   /* box-shadow: 0px 5px 10px 0px rgb(104, 169, 104); */
   border-radius: 20px;
@@ -59,7 +59,7 @@ p {
 .col:hover {
   cursor: pointer;
   transform: translateY(-5px);
-  box-shadow: 0px 10px 20px 2px rgb(247, 242, 195);
+  box-shadow: 0px 8px 10px 2px rgb(247, 242, 195);
   transition: all 200ms ease-in-out;
 }
 
@@ -145,9 +145,8 @@ p {
   width: 35%;
 }
 
-.temps {
+.weather-forecast-temperatures {
   margin: 0 auto;
-  margin-top: -20px;
   color: #93e4c1;
   font-weight: bold;
   font-size: 16px;
@@ -155,6 +154,10 @@ p {
 
 .weather {
   font-size: 60px;
+}
+
+.weather-forecast-data {
+  margin-bottom: -20px;
 }
 
 #celsius-link {
