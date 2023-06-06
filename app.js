@@ -28,6 +28,11 @@ let h3 = document.querySelector("#date");
 let currentDate = new Date();
 h3.innerHTML = formatDate(currentDate);
 
+//Forceast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+}
+
 //Bonus geolocation/button
 function getCurrentPosition(event) {
   event.preventDefault();

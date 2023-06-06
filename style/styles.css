@@ -2,15 +2,6 @@ body {
   font-family: "Lora", serif;
   text-align: center;
   margin: 0 auto;
-  max-width: 45%;
-  background: #191a19;
-}
-
-#weather-app {
-  background: #fff;
-  border: solid 1px rgb(240, 255, 240);
-  border-radius: 40px;
-  max-width: 90%;
 }
 
 h3 {
@@ -21,8 +12,7 @@ h3 {
   margin-bottom: 2px;
   font-size: 16px;
   font-style: italic;
-  background: rgb(144, 215, 143);
-  color: #000;
+  color: rgb(247, 242, 195);
   width: 20%;
 }
 
@@ -32,12 +22,12 @@ p {
   height: 25px;
   margin: 0 auto;
   margin-top: 80px;
-  padding-right: 350px;
+  padding-right: 340px;
 }
 
 .bottom-link {
   text-decoration: none;
-  color: rgb(130, 191, 129);
+  color: #93e4c1;
   font-weight: bold;
   text-decoration: underline;
   font-size: 14px;
@@ -49,12 +39,13 @@ p {
   font-size: 14px;
   border: none;
   position: float;
-  left: 215px;
-  bottom: 130px;
+  left: 195px;
+  bottom: 120px;
 }
 
 .col {
   /* background: rgb(144, 215, 143); */
+  color: rgb(247, 242, 195);
   font-size: 15px;
   margin: 0, auto;
   margin-left: 20px;
@@ -68,7 +59,7 @@ p {
 .col:hover {
   cursor: pointer;
   transform: translateY(-5px);
-  box-shadow: 0px 10px 20px 2px rgb(176, 216, 176);
+  box-shadow: 0px 10px 20px 2px rgb(247, 242, 195);
   transition: all 200ms ease-in-out;
 }
 
@@ -85,7 +76,7 @@ p {
 
 .link {
   font-size: 12px;
-  color: #908e8e;
+  color: #000;
 }
 
 .music {
@@ -117,14 +108,16 @@ p {
   margin: 0 auto;
   margin-top: 10px;
   text-align: center;
-  border: solid 1px rgb(144, 215, 143);
-  border-radius: 10px;
+  border: solid 1px #93e4c1;
+  border-radius: 8px;
   padding: 0px;
+  width: 50%;
+  box-decoration-break: slice;
 }
 
 .submit-button {
-  border: solid 1px rgb(144, 215, 143);
-  background: rgb(144, 215, 143);
+  border: solid 1px #93e4c1;
+  background: #93e4c1;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 20px;
@@ -155,8 +148,9 @@ p {
 .temps {
   margin: 0 auto;
   margin-top: -20px;
-  color: #000;
+  color: #93e4c1;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .weather {
@@ -183,7 +177,7 @@ p {
   border: solid, transparent;
   border-radius: 20px;
   /* background: rgb(144, 215, 143); */
-  color: rgb(122, 183, 121);
+  color: rgb(247, 242, 195);
   width: 100%;
 }
 
@@ -199,13 +193,13 @@ p {
 }
 
 #humidity {
-  color: rgb(122, 183, 121);
+  color: rgb(247, 242, 195);
   font-size: 16px;
 }
 
 #location-dot {
-  border: solid 1px rgb(144, 215, 143);
-  background: rgb(144, 215, 143);
+  border: solid 1px #93e4c1;
+  background: #93e4c1;
   border-radius: 10px;
   padding: 5px;
   display: inline-block;
@@ -227,14 +221,14 @@ p {
 
 #temp {
   font-size: 45px;
-  color: rgb(144, 215, 143);
+  color: #93e4c1;
   font-weight: bold;
   margin-left: 65px;
 }
 
 #temp-details {
   font-size: 40px;
-  color: rgb(144, 215, 143);
+  color: #93e4c1;
   font-weight: bold;
 }
 
@@ -243,7 +237,14 @@ p {
   top: -10px;
 }
 
+#weather-app {
+  background: #118a7e;
+  border: solid 1px#118a7e;
+  border-radius: 40px;
+  max-width: 40%;
+}
+
 #windspeed {
-  color: rgb(122, 183, 121);
+  color: rgb(247, 242, 195);
   font-size: 16px;
 }
