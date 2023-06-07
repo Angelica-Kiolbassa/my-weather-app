@@ -32,18 +32,33 @@ h3.innerHTML = formatDate(currentDate);
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = `
-  <div class="row g-3">
-    <div class="col">
-     <div class = "weather-forecast-data">Mon</div>
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col" id="col">
+     <div class = "weather-forecast-data">${day}</div>
      <div class = "icon">⛅️</div>
      <div class= "weather-forecast-temperatures">
-      <span class="weather-forecast-temperature-max">70°</span>
-      <span class="weather-forecast-temperature-min">80°</span>
+      <span class="weather-forecast-temperature-max">70° </span>
+      <span class="weather-forecast-temperature-min"> 80°</span>
       </div>
     </div>
-  </div>
-`;
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //Bonus geolocation/button
@@ -85,6 +100,8 @@ function showWeather(response) {
   document.querySelector("#windspeed").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  getForecast(response.data.coord);
 }
 
 //Api info
