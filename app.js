@@ -29,36 +29,57 @@ let currentDate = new Date();
 h3.innerHTML = formatDate(currentDate);
 
 //Forceast
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function formatDay(timestamp) {
+  let date1 = new Date(timestamp * 1000);
+  let day1 = date1.getDay();
+  let days1 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-    <div class="col" id="col">
-     <div class = "weather-forecast-data">${day}</div>
-     <div class = "icon">⛅️</div>
-     <div class= "weather-forecast-temperatures">
-      <span class="weather-forecast-temperature-max">70° </span>
-      <span class="weather-forecast-temperature-min"> 80°</span>
-      </div>
-    </div>
-  `;
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
+  return days1[day1];
 }
 
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
+
+  function displayForecast(response) {
+    let forecast = response.data.daily;
+    console.log(response.data);
+
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class="row">`;
+    forecast.forEach(function (forecastDay, index) {
+      if (index < 5) {
+        forecastHTML =
+          forecastHTML +
+          `
+    <div class="col" id="col">
+     <div class ="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+     <img src= "https://openweathermap.org/img/wn/${
+       forecastDay.weather[0].icon
+     }@2x.png"
+     alt=""
+     width= "35" />
+     <div class= "weather-forecast-temperatures">
+      <span class="weather-forecast-temperature-max">${Math.round(
+        forecastDay.temp.max
+      )}° </span>
+      <span class="weather-forecast-temperature-min">${Math.round(
+        forecastDay.temp.min
+      )}°</span>
+      </div>
+    </div>
+  `;
+      }
+    });
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  }
 }
 
 //Bonus geolocation/button
@@ -147,5 +168,3 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 let fahrenheitlink = document.querySelector("#fahrenheit-link");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
-
-displayForecast();
