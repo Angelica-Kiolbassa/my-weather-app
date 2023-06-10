@@ -91,12 +91,11 @@ function getCurrentPosition(event) {
 }
 
 function showLocation(position) {
-  let lon = position.data.city.coordinates.longitude;
-  let lat = position.data.city.coordinates.latitude;
   let apiKey = "d8o5aa0df3a2c34948fdac8abdta545d";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.lon}&lat=${position.lat}&key=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=imperial`;
+  console.log(position);
 
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeather);
+  axios.get(apiUrl).then(showWeather);
 }
 
 let button = document.querySelector("#location-dot");
