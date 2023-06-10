@@ -31,10 +31,10 @@ h3.innerHTML = formatDate(currentDate);
 //Forceast
 function formatDay(timestamp) {
   let date1 = new Date(timestamp * 1000);
-  let day1 = date1.getDay();
-  let days1 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = date1.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  return days1[day1];
+  return days[day];
 }
 
 function getForecast(coordinates) {
@@ -59,9 +59,7 @@ function displayForecast(response) {
         forecastHTML +
         `
     <div class="col" id="col">
-     <div class ="weather-forecast-date">${formatDay(
-       forecastDay.temperature.day
-     )}</div>
+     <div class ="weather-forecast-date">${formatDay(forecastDay.time)}</div>
      <img src= "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
        forecastDay.condition.icon
      }.png"
@@ -92,7 +90,7 @@ function getCurrentPosition(event) {
 
 function showLocation(position) {
   let apiKey = "d8o5aa0df3a2c34948fdac8abdta545d";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=imperial`;
   console.log(position);
 
   axios.get(apiUrl).then(showWeather);
